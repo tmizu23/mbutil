@@ -53,6 +53,10 @@ if __name__ == '__main__':
         action="store_true",
         default=False)
 
+    parser.add_option('--type', dest='type',
+        help='''The type of the output tiles, either image, utfgrid or both image and utfgrid''',
+        choices=['image', 'grid', 'both'],
+        default='image')
     (options, args) = parser.parse_args()
 
     # Transfer operations
